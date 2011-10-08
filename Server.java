@@ -13,7 +13,12 @@ public class Server extends UnicastRemoteObject implements ServerIntf {
     public String getMessage() {
         return "Hello World!";
     }
-    
+
+	public String reverseString(String s) {
+		String reverse = new StringBuffer(s).reverse().toString();
+		return reverse;
+	}    
+
     public static void main(String args[]) throws RemoteException {
 	System.setProperty("java.security.policy", "server.policy");
 	
