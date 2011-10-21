@@ -25,13 +25,16 @@ public class Client {
             System.setSecurityManager(new RMISecurityManager());
 	
 	try {
-	    ServerIntf obj = (ServerIntf) Naming.lookup("//localhost/some_name");
+//	    ServerIntf obj = (ServerIntf) Naming.lookup("//localhost/some_name");
+		ServerIntf obj = (ServerIntf) Naming.lookup("Obj");
+		ServerIntf obj2 = (ServerIntf) Naming.lookup("Obj2");
 		//System.out.print ("Podaj tekst do odwrocenia: ");
 		//String s = readLine();
 		//System.out.print ("Tekst po odwroceniu: ");
 		//System.out.println(obj.reverseString(s));
 		System.out.println(obj.getMessage());
-		obj.setLogserver();
+		//obj.setLogserver();
+		System.out.println(obj2.getMessage());
 
 	} catch (Exception e) {
 	    System.out.println(e.getMessage());	    
