@@ -26,10 +26,13 @@ public class Client {
 	
 	try {
 	    ServerIntf obj = (ServerIntf) Naming.lookup("//localhost/some_name");
-		System.out.print ("Podaj tekst do odwrocenia: ");
-		String s = readLine();
-		System.out.print ("Tekst po odwroceniu: ");
-		System.out.println(obj.reverseString(s));
+		//System.out.print ("Podaj tekst do odwrocenia: ");
+		//String s = readLine();
+		//System.out.print ("Tekst po odwroceniu: ");
+		//System.out.println(obj.reverseString(s));
+		System.out.println(obj.getMessage());
+		obj.setLogserver();
+
 	} catch (Exception e) {
 	    System.out.println(e.getMessage());	    
 	}
