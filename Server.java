@@ -21,6 +21,7 @@ public class Server extends UnicastRemoteObject implements ServerIntf, Unreferen
 	}
 	// java.rmi.dgc.checkInterval;
 	// java.rmi.dgc.checkinterval;    
+	// java -Djava.rmi.dgc.checkinterval=1000 Server; --komenda
 
     public String getMessage() {
         try {
