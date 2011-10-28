@@ -31,6 +31,10 @@ public class Server extends UnicastRemoteObject implements ServerIntf, Unreferen
 		}
 	}
 
+	public OurClass getOurClass() {
+		return new OurClass(2);
+	}
+
 	public void setLogserver() {
 		setLog(System.out);
 	}
